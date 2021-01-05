@@ -4,7 +4,7 @@
         private array $config;
 
         public function __construct(string $config_path = "/config.php") {
-            require_once(__DIR__."/../..".$config_path);
+            require(__DIR__."/../..".$config_path);
             $this->config = $global_config;
             unset($global_config);
         }
